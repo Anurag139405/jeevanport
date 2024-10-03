@@ -3,8 +3,6 @@ import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import HireMeModal from '../HireMeModal';
-import logoLight from '../../images/logo-light.svg';
-import logoDark from '../../images/logo-dark.svg';
 import { motion } from 'framer-motion';
 import Button from '../reusable/Button';
 
@@ -45,23 +43,14 @@ const AppHeader = () => {
 			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
-					<div>
-						<Link to="/">
-							{activeTheme === 'dark' ? (
-								<img
-									src={logoDark}
-									className="w-36"
-									alt="Dark Logo"
-								/>
-							) : (
-								<img
-									src={logoLight}
-									className="w-36"
-									alt="Dark Logo"
-								/>
-							)}
-						</Link>
-					</div>
+				<div className='font-general-medium mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none'>
+  <Link to="/">
+    <span className="block text-left text-2xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
+      Jeevan
+    </span>
+  </Link>
+</div>
+
 
 					{/* Theme switcher small screen */}
 					<div
